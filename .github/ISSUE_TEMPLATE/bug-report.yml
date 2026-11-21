@@ -1,0 +1,120 @@
+name: Bug report
+description: Report a reproducible problem with the H-Code browser extension
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem with H-Code.
+        Remove credentials, tokens, conversation content, private links, and account IDs before submitting.
+
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Existing issues
+      description: Check open and closed issues before creating a duplicate report.
+      options:
+        - label: I searched the existing issues and did not find this problem.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe what happened and how it affected your use of the extension.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. Open ChatGPT or Claude.
+        2. Open H-Code.
+        3. Click ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: H-Code version
+      description: Find this on your browser's extension details page.
+      placeholder: 0.1.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Edge or another Chromium browser
+        - Safari
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser version
+      description: Include the full version from the browser's About page.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: site
+    attributes:
+      label: Site
+      options:
+        - ChatGPT
+        - Claude
+        - Both
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: status
+    attributes:
+      label: H-Code status or error
+      description: Copy the status text if relevant, after removing account IDs and private information.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant console messages
+      description: Remove credentials, tokens, private links, conversation content, and account IDs before posting.
+      render: text
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add screenshots or other details only after removing private account data.
